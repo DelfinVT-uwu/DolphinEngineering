@@ -818,7 +818,14 @@ function route() {
   if (hash === 'login' || hash === 'register' || hash === '403') { document.getElementById('loader').classList.add('hidden'); }
 }
 window.addEventListener('hashchange', route);
-window.addEventListener('DOMContentLoaded', route);
+window.addEventListener('DOMContentLoaded', function() {
+  var p = window.location.pathname.replace(/\/$/, '');
+  if (p && p !== '') {
+    var known = { '/login':'login','/register':'register','/dashboard':'dashboard','/403':'403' };
+    if (known[p]) { window.location.replace('/#' + known[p]); return; }
+  }
+  route();
+});
 
 /* ═══ HOME PAGE ═══ */
 var homeInitialized = false;

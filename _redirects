@@ -1,0 +1,9 @@
+# SPA fallback for hash-routed pages
+/login / 200
+/register / 200
+/dashboard / 200
+/403 / 200
+/login.html / 200
+/register.html / 200
+/dashboard.html / 200
+/403.html / 200
