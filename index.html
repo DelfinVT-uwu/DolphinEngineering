@@ -277,118 +277,6 @@
       #btt svg { width: 17px; height: 17px; }
     }
 
-    /* ═══ LOGIN / REGISTER ═══ */
-    #page-login, #page-register {
-      display: none; min-height: 100vh; align-items: center; justify-content: center;
-      font-family: 'Inter', system-ui, sans-serif; overflow: hidden;
-    }
-    #page-login.active, #page-register.active { display: flex; }
-    #page-login .container, #page-register .container { width: 100%; max-width: 440px; padding: 2rem; }
-    #page-login .card, #page-register .card {
-      background: rgba(11,4,32,.92); border: 1px solid var(--brd2);
-      border-radius: 20px; padding: 2.5rem;
-      box-shadow: 0 0 80px rgba(168,85,247,.06); backdrop-filter: blur(12px);
-    }
-    #page-login .logo, #page-register .logo {
-      display: flex; align-items: center; gap: .65rem;
-      text-decoration: none; color: var(--tx);
-      font-weight: 800; font-size: 1.1rem; letter-spacing: -.3px;
-      margin-bottom: 2rem; justify-content: center;
-    }
-    #page-login .logo-mark, #page-register .logo-mark {
-      width: 34px; height: 34px; border-radius: 8px;
-      background: var(--grad); display: flex; align-items: center; justify-content: center;
-      position: relative;
-    }
-    #page-login .logo-mark::after, #page-register .logo-mark::after {
-      content: ''; position: absolute; inset: -3px; border-radius: 11px;
-      background: var(--grad); z-index: -1; opacity: .4; filter: blur(9px);
-    }
-    #page-login .logo-mark svg, #page-register .logo-mark svg { width: 18px; height: 18px; color: #fff; }
-    #page-login h1, #page-register h1 { font-size: 1.4rem; font-weight: 700; text-align: center; margin-bottom: .3rem; }
-    #page-login .sub, #page-register .sub { color: var(--tx2); text-align: center; font-size: .85rem; margin-bottom: 2rem; }
-    #page-login .fi, #page-register .fi {
-      width: 100%; padding: .85rem 1rem; background: var(--bg); border: 1px solid var(--brd);
-      border-radius: 10px; color: var(--tx); font-family: inherit; font-size: .9rem;
-      transition: all .3s;
-    }
-    #page-login .fi:focus, #page-register .fi:focus { outline: none; border-color: var(--pu); box-shadow: 0 0 0 3px rgba(168,85,247,.12); }
-    #page-login .fi::placeholder, #page-register .fi::placeholder { color: var(--tx3); }
-    #page-login .fi.error, #page-register .fi.error { border-color: #f87171; box-shadow: 0 0 0 3px rgba(248,113,113,.12); }
-    #page-login .btn, #page-register .btn {
-      width: 100%; padding: .9rem; border-radius: 10px;
-      background: var(--grad); color: #fff; border: none;
-      font-size: .9rem; font-weight: 600; cursor: pointer;
-      transition: all .3s; box-shadow: 0 4px 20px var(--gp);
-    }
-    #page-login .btn:hover, #page-register .btn:hover { transform: translateY(-1px); box-shadow: 0 8px 30px var(--gp); }
-    #page-login .btn:disabled, #page-register .btn:disabled { opacity: .5; cursor: not-allowed; transform: none; }
-    #page-login .foot, #page-register .foot { text-align: center; margin-top: 1.5rem; font-size: .85rem; color: var(--tx3); }
-    #page-login .foot a, #page-register .foot a { color: var(--pu); text-decoration: none; }
-    #page-login .foot a:hover, #page-register .foot a:hover { text-decoration: underline; }
-    #page-login .msg, #page-register .msg {
-      padding: .75rem; border-radius: 8px; font-size: .82rem; margin-bottom: 1.25rem; display: none;
-    }
-    #page-login .msg.error, #page-register .msg.error { display: block; background: rgba(248,113,113,.1); border: 1px solid rgba(248,113,113,.25); color: #f87171; }
-    #page-login .msg.success, #page-register .msg.success { display: block; background: rgba(74,222,128,.1); border: 1px solid rgba(74,222,128,.25); color: #4ade80; }
-
-    /* ═══ DASHBOARD ═══ */
-    #page-dashboard { display: none; font-family: 'Inter', system-ui, sans-serif; min-height: 100vh; }
-    #page-dashboard.active { display: flex; }
-    #page-dashboard #side { width: 260px; background: var(--bg2); border-right: 1px solid var(--brd); padding: 2rem 1.5rem; display: flex; flex-direction: column; flex-shrink: 0; }
-    #page-dashboard .side-logo { display: flex; align-items: center; gap: .65rem; text-decoration: none; color: var(--tx); font-weight: 800; font-size: 1rem; letter-spacing: -.3px; margin-bottom: 2.5rem; }
-    #page-dashboard .side-logo .mark { width: 32px; height: 32px; border-radius: 8px; background: var(--grad); display: flex; align-items: center; justify-content: center; }
-    #page-dashboard .side-logo .mark svg { width: 16px; height: 16px; color: #fff; }
-    #page-dashboard .nav-item { display: flex; align-items: center; gap: .75rem; padding: .75rem 1rem; border-radius: 10px; color: var(--tx2); text-decoration: none; font-size: .85rem; font-weight: 500; transition: all .2s; cursor: pointer; border: none; background: none; width: 100%; text-align: left; }
-    #page-dashboard .nav-item:hover { background: rgba(168,85,247,.08); color: var(--tx); }
-    #page-dashboard .nav-item.active { background: rgba(168,85,247,.12); color: var(--pu); }
-    #page-dashboard .nav-item svg { width: 18px; height: 18px; flex-shrink: 0; }
-    #page-dashboard .side-bot { margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--brd); }
-    #page-dashboard .badge-count { margin-left: auto; background: var(--err); color: #fff; font-size: .65rem; font-weight: 700; padding: .1rem .45rem; border-radius: 10px; min-width: 20px; text-align: center; }
-    #page-dashboard #main { flex: 1; overflow-y: auto; padding: 2rem 2.5rem; }
-    #page-dashboard .topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
-    #page-dashboard .topbar h2 { font-size: 1.3rem; font-weight: 700; }
-    #page-dashboard .topbar p { font-size: .82rem; color: var(--tx3); }
-    #page-dashboard .user-badge { display: flex; align-items: center; gap: .5rem; font-size: .82rem; color: var(--tx2); }
-    #page-dashboard .user-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--grad); display: flex; align-items: center; justify-content: center; font-size: .8rem; font-weight: 700; color: #fff; }
-    #page-dashboard .stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; margin-bottom: 2rem; }
-    #page-dashboard .stat { background: var(--bg2); border: 1px solid var(--brd); border-radius: 14px; padding: 1.25rem; }
-    #page-dashboard .stat-num { font-size: 1.6rem; font-weight: 800; letter-spacing: -1px; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    #page-dashboard .stat-lbl { font-size: .72rem; color: var(--tx3); margin-top: .2rem; text-transform: uppercase; letter-spacing: .5px; }
-    #page-dashboard .card { background: var(--bg2); border: 1px solid var(--brd); border-radius: 14px; padding: 1.5rem; margin-bottom: 1.5rem; }
-    #page-dashboard .card-hdr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
-    #page-dashboard .card-hdr h3 { font-size: .95rem; font-weight: 600; }
-    #page-dashboard .card-hdr .count { font-size: .75rem; color: var(--tx3); }
-    #page-dashboard table { width: 100%; border-collapse: collapse; font-size: .82rem; }
-    #page-dashboard th { text-align: left; color: var(--tx3); font-weight: 600; font-size: .7rem; text-transform: uppercase; letter-spacing: .5px; padding: .6rem .5rem; border-bottom: 1px solid var(--brd); }
-    #page-dashboard td { padding: .65rem .5rem; border-bottom: 1px solid var(--brd); color: var(--tx2); }
-    #page-dashboard tr:hover td { background: rgba(168,85,247,.03); }
-    #page-dashboard .tag { display: inline-block; font-size: .65rem; padding: .15rem .5rem; border-radius: 4px; font-weight: 500; }
-    #page-dashboard .tag.admin { background: rgba(168,85,247,.15); color: var(--pu); }
-    #page-dashboard .tag.user { background: rgba(96,165,250,.15); color: var(--bl); }
-    #page-dashboard .tag.unread { background: rgba(248,113,113,.15); color: var(--err); }
-    #page-dashboard .tag.read { background: rgba(74,222,128,.15); color: var(--ok); }
-    #page-dashboard .act-btn { background: none; border: 1px solid var(--brd2); color: var(--tx2); padding: .3rem .6rem; border-radius: 6px; cursor: pointer; font-size: .75rem; transition: all .2s; }
-    #page-dashboard .act-btn:hover { border-color: var(--err); color: var(--err); }
-    #page-dashboard .act-btn.ok:hover { border-color: var(--ok); color: var(--ok); }
-    #page-dashboard .empty { text-align: center; padding: 3rem; color: var(--tx3); font-size: .85rem; }
-    #page-dashboard .section { display: none; }
-    #page-dashboard .section.active { display: block; }
-    @media (max-width:768px) {
-      #page-dashboard #side { width: 60px; padding: 1rem .75rem; }
-      #page-dashboard #side .side-logo span, #page-dashboard #side .nav-item span, #page-dashboard #side .side-bot .nav-item span { display: none; }
-      #page-dashboard .side-logo { justify-content: center; }
-      #page-dashboard .stats { grid-template-columns: repeat(2,1fr); }
-      #page-dashboard #main { padding: 1.5rem 1rem; }
-    }
-
-    /* ═══ 403 ═══ */
-    #page-403 { display: none; min-height: 100vh; align-items: center; justify-content: center; text-align: center; padding: 2rem; font-family: 'Inter', system-ui, sans-serif; }
-    #page-403.active { display: flex; }
-    #page-403 h1 { font-size: 5rem; font-weight: 800; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    #page-403 p { color: var(--tx2); margin: 1rem 0 2rem; font-size: 1.1rem; }
-    #page-403 a { color: var(--pu); text-decoration: none; padding: .75rem 1.5rem; border: 1px solid var(--brd2); border-radius: 10px; transition: all .2s; }
-    #page-403 a:hover { background: rgba(168,85,247,.1); border-color: var(--pu); }
   </style>
 </head>
 <body>
@@ -415,7 +303,7 @@
   <!-- NAV -->
   <nav id="nav">
     <div class="nav-in">
-      <a href="#" onclick="return navigate('home')" class="logo">
+      <a href="#hero" class="logo">
         <div class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         DolphinEngineering
       </a>
@@ -428,8 +316,6 @@
         <li><a href="#contacto" class="nav-link">Contacto</a></li>
       </ul>
       <div class="nav-acts">
-        <a href="#login" class="nbtn nbtn-ghost" onclick="return navigate('login')">Iniciar Sesión</a>
-        <a href="#register" class="nbtn nbtn-solid" onclick="return navigate('register')">Registrarse</a>
       </div>
       <button class="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
     </div>
@@ -445,8 +331,6 @@
     <a href="/about">Sobre mí</a>
     <a href="#contacto" onclick="closeMobile()">Contacto</a>
     <div class="nav-acts">
-      <a href="#login" class="nbtn nbtn-ghost" onclick="return navigate('login')">Iniciar Sesión</a>
-      <a href="#register" class="nbtn nbtn-solid" onclick="return navigate('register')">Registrarse</a>
     </div>
   </div>
 
@@ -607,7 +491,6 @@
         <p>Solicita una evaluación inicial para identificar las áreas de mayor riesgo en tu organización.</p>
         <div class="cta-btns">
           <a href="#contacto" class="btn btn-p">Solicitar Evaluación</a>
-          <a href="#register" class="btn btn-g" onclick="return navigate('register')">Crear Cuenta</a>
         </div>
       </div>
     </div>
@@ -628,31 +511,29 @@
             <div class="km"><span class="km-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></span><span>México | Remoto Global</span></div>
           </div>
         </div>
-        <form class="kform" id="contactForm">
-          <div class="frow">
-            <div class="fg"><label class="fl">Nombre *</label><input type="text" class="fi" name="name" placeholder="Tu nombre completo" required></div>
-            <div class="fg"><label class="fl">Organización</label><input type="text" class="fi" name="organization" placeholder="Tu empresa"></div>
+        <div class="kform">
+          <h3>Contáctame Directo</h3>
+          <p style="color:var(--tx3);margin-bottom:1.5rem">Estoy disponible para consultas de seguridad. Escríbeme por cualquiera de estos medios:</p>
+          <div style="background:var(--s2);border-radius:12px;padding:1.5rem;border:1px solid var(--b2)">
+            <a href="mailto:DelfinVT@proton.me" style="display:flex;align-items:center;gap:.75rem;padding:.75rem;color:var(--tx1);text-decoration:none;border-radius:8px;transition:background .2s" onmouseover="this.style.background='var(--s3)'" onmouseout="this.style.background='transparent'">
+              <span style="width:40px;height:40px;border-radius:10px;background:var(--p1);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+              <div><strong>DelfinVT@proton.me</strong><br><span style="font-size:.8rem;color:var(--tx3)">Respuesta en menos de 24h</span></div>
+            </a>
+            <a href="https://discord.gg/3cdfWfCsg2" target="_blank" style="display:flex;align-items:center;gap:.75rem;padding:.75rem;color:var(--tx1);text-decoration:none;border-radius:8px;transition:background .2s" onmouseover="this.style.background='var(--s3)'" onmouseout="this.style.background='transparent'">
+              <span style="width:40px;height:40px;border-radius:10px;background:var(--s4);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><path d="M8 12h.01M12 12h.01M16 12h.01M21 15c0 3-1.5 5-5.5 5L13 17h-2l-2.5 3C4 20 3 18 3 15V9c0-3 1.5-5 5-5h8c3.5 0 5 2 5 5v6z"/></svg></span>
+              <div><strong>Discord: Delfinvt_uwu</strong><br><span style="font-size:.8rem;color:var(--tx3)">Mensajes directos abiertos</span></div>
+            </a>
+            <a href="https://twitch.tv/Delfin_VT" target="_blank" style="display:flex;align-items:center;gap:.75rem;padding:.75rem;color:var(--tx1);text-decoration:none;border-radius:8px;transition:background .2s" onmouseover="this.style.background='var(--s3)'" onmouseout="this.style.background='transparent'">
+              <span style="width:40px;height:40px;border-radius:10px;background:var(--a1);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><path d="M21 2H3v16h5v4l4-4h5l4-4V2z"/><line x1="11" y1="7" x2="11" y2="11"/><line x1="15" y1="7" x2="15" y2="11"/></svg></span>
+              <div><strong>Twitch: Delfin_VT</strong><br><span style="font-size:.8rem;color:var(--tx3)">Live de hacking y ciberseguridad</span></div>
+            </a>
+            <div style="display:flex;align-items:center;gap:.75rem;padding:.75rem;border-radius:8px">
+              <span style="width:40px;height:40px;border-radius:10px;background:var(--s3);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></span>
+              <div><strong>México | Remoto Global</strong><br><span style="font-size:.8rem;color:var(--tx3)">Disponible para proyectos internacionales</span></div>
+            </div>
           </div>
-          <div class="fg"><label class="fl">Email *</label><input type="email" class="fi" name="email" placeholder="correo@empresa.com" required></div>
-          <div class="fg">
-            <label class="fl">Servicio de interés</label>
-            <select class="fsel" name="service">
-              <option value="">Seleccionar servicio</option>
-              <option value="pentest">Penetration Testing</option>
-              <option value="redteam">Red Team Operations</option>
-              <option value="mobile">Mobile Security</option>
-              <option value="osint">OSINT & Intelligence</option>
-              <option value="privacy">Privacidad & Anonimato</option>
-              <option value="incident">Incident Response</option>
-              <option value="reverse">Ingeniería Inversa</option>
-              <option value="audit">Auditoría & Compliance</option>
-              <option value="tools">Herramientas</option>
-              <option value="other">Otro</option>
-            </select>
-          </div>
-          <div class="fg"><label class="fl">Mensaje *</label><textarea class="fta" name="message" placeholder="Describe tu necesidad de seguridad..." required></textarea></div>
-          <button type="submit" class="btn btn-p" style="width:100%;justify-content:center">Enviar Solicitud</button>
-        </form>
+          <p style="margin-top:1rem;font-size:.85rem;color:var(--tx3)">No uso formularios — háblame directo. Respondo más rápido.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -662,11 +543,11 @@
     <div class="wrap">
       <div class="fgrid">
         <div class="fbrand">
-          <a href="#" onclick="return navigate('home')" class="logo"><div class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>DolphinEngineering</a>
+          <a href="#hero" class="logo"><div class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>DolphinEngineering</a>
           <p>Servicios especializados de ciberseguridad para infraestructuras críticas y sectores regulados.</p>
         </div>
         <div class="fcol"><h4>Servicios</h4><a href="#servicios">Pentesting</a><a href="#servicios">Red Team</a><a href="#servicios">Mobile Security</a><a href="#servicios">OSINT</a></div>
-        <div class="fcol"><h4>Empresa</h4><a href="#metodologia">Metodología</a><a href="#certificaciones">Certificaciones</a><a href="#productos">Productos</a><a href="#login" onclick="return navigate('login')">Portal Clientes</a></div>
+        <div class="fcol"><h4>Empresa</h4><a href="#metodologia">Metodología</a><a href="#certificaciones">Certificaciones</a><a href="#productos">Productos</a></div>
         <div class="fcol"><h4>Legal</h4><a href="/terms">Términos de Uso</a><a href="/privacy">Privacidad</a><a href="#contacto">Contacto</a></div>
       </div>
       <div class="fbot">
@@ -678,100 +559,7 @@
 
 </div><!-- /page-home -->
 
-<!-- ═══════════════════════════════════════════════════════
-     PAGE: LOGIN
-     ═══════════════════════════════════════════════════════ -->
-<div id="page-login" class="page">
-  <div class="container">
-    <div class="card">
-      <a href="#" onclick="return navigate('home')" class="logo">
-        <div class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        DolphinEngineering
-      </a>
-      <h1>Iniciar Sesión</h1>
-      <p class="sub">Accede a tu panel de cliente</p>
-      <div class="msg" id="loginMsg"></div>
-      <form id="loginForm">
-        <div class="fg"><label class="fl">Email</label><input type="email" class="fi" id="loginEmail" placeholder="correo@ejemplo.com" required></div>
-        <div class="fg"><label class="fl">Contraseña</label><input type="password" class="fi" id="loginPassword" placeholder="••••••••" required></div>
-        <button type="submit" class="btn">Entrar</button>
-      </form>
-      <div class="foot">¿No tienes cuenta? <a href="#register" onclick="return navigate('register')">Regístrate</a></div>
-    </div>
-  </div>
-</div>
 
-<!-- ═══════════════════════════════════════════════════════
-     PAGE: REGISTER
-     ═══════════════════════════════════════════════════════ -->
-<div id="page-register" class="page">
-  <div class="container">
-    <div class="card">
-      <a href="#" onclick="return navigate('home')" class="logo">
-        <div class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        DolphinEngineering
-      </a>
-      <h1>Crear Cuenta</h1>
-      <p class="sub">Regístrate para acceder al portal</p>
-      <div class="msg" id="registerMsg"></div>
-      <form id="registerForm">
-        <div class="fg"><label class="fl">Nombre completo *</label><input type="text" class="fi" id="regName" placeholder="Tu nombre" required></div>
-        <div class="fg"><label class="fl">Email *</label><input type="email" class="fi" id="regEmail" placeholder="correo@ejemplo.com" required></div>
-        <div class="fg"><label class="fl">Organización</label><input type="text" class="fi" id="regOrg" placeholder="Tu empresa (opcional)"></div>
-        <div class="fg"><label class="fl">Contraseña *</label><input type="password" class="fi" id="regPassword" placeholder="Mínimo 6 caracteres" required></div>
-        <button type="submit" class="btn">Crear Cuenta</button>
-      </form>
-      <div class="foot">¿Ya tienes cuenta? <a href="#login" onclick="return navigate('login')">Inicia sesión</a></div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════════════════════
-     PAGE: DASHBOARD
-     ═══════════════════════════════════════════════════════ -->
-<div id="page-dashboard" class="page">
-  <nav id="side">
-    <a href="#" onclick="return navigate('home')" class="side-logo">
-      <div class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-      <span>DolphinEngine</span>
-    </a>
-    <button class="nav-item active" data-section="overview"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Panel</span></button>
-    <button class="nav-item" data-section="messages"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><span>Mensajes</span><span class="badge-count" id="unreadBadge" style="display:none">0</span></button>
-    <button class="nav-item" data-section="users"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg><span>Usuarios</span></button>
-    <div class="side-bot">
-      <button class="nav-item" id="logoutBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg><span>Cerrar Sesión</span></button>
-    </div>
-  </nav>
-  <div id="main">
-    <div class="topbar"><div><h2>Dashboard</h2><p id="greeting">Panel de administración</p></div><div class="user-badge"><span id="userName">Admin</span><div class="user-avatar" id="userAvatar">A</div></div></div>
-    <div class="section active" id="sec-overview">
-      <div class="stats">
-        <div class="stat"><div class="stat-num" id="statUsers">0</div><div class="stat-lbl">Usuarios Registrados</div></div>
-        <div class="stat"><div class="stat-num" id="statMessages">0</div><div class="stat-lbl">Mensajes</div></div>
-        <div class="stat"><div class="stat-num" id="statUnread">0</div><div class="stat-lbl">No Leídos</div></div>
-        <div class="stat"><div class="stat-num" id="statRecent">0</div><div class="stat-lbl">Nuevos (7d)</div></div>
-      </div>
-      <div class="card"><div class="card-hdr"><h3>Últimos Mensajes</h3><span class="count" id="recentCount">0</span></div><div id="recentMessages"><div class="empty">Cargando...</div></div></div>
-    </div>
-    <div class="section" id="sec-messages">
-      <div class="card"><div class="card-hdr"><h3>Todos los Mensajes</h3><span class="count" id="msgCount">0</span></div><div id="messagesList"><div class="empty">Cargando...</div></div></div>
-    </div>
-    <div class="section" id="sec-users">
-      <div class="card"><div class="card-hdr"><h3>Usuarios Registrados</h3><span class="count" id="userCount">0</span></div><div id="usersList"><div class="empty">Cargando...</div></div></div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════════════════════
-     PAGE: 403
-     ═══════════════════════════════════════════════════════ -->
-<div id="page-403" class="page">
-  <div>
-    <h1>403</h1>
-    <p>No tienes permisos para acceder a esta página.</p>
-    <a href="#" onclick="return navigate('home')">Volver al inicio</a>
-  </div>
-</div>
 
 <!-- ══ BACK TO TOP ══ -->
 <button id="btt" aria-label="Volver arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
@@ -795,11 +583,10 @@ document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
   }, 1500);
 })();
 
-/* ═══ HASH ROUTER ═══ */
-function navigate(page) {
-  window.location.hash = page;
-  return false;
-}
+/* ═══ INIT ═══ */
+window.addEventListener('DOMContentLoaded', function() { homePageInit(); });
+
+/* ═══ NAV ═══ */
 function closeMobile() {
   var h = document.querySelector('.hamburger');
   if (h) h.classList.remove('active');
@@ -807,25 +594,6 @@ function closeMobile() {
   document.getElementById('mobileOverlay').classList.remove('show');
   if (document.body) document.body.style.overflow = '';
 }
-function route() {
-  var hash = window.location.hash.replace('#','') || 'home';
-  document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
-  var page = document.getElementById('page-' + hash);
-  if (page) page.classList.add('active');
-  else document.getElementById('page-home').classList.add('active');
-  if (hash === 'dashboard') dashboardInit();
-  if (hash === 'home') homePageInit();
-  if (hash === 'login' || hash === 'register' || hash === '403') { document.getElementById('loader').classList.add('hidden'); }
-}
-window.addEventListener('hashchange', route);
-window.addEventListener('DOMContentLoaded', function() {
-  var p = window.location.pathname.replace(/\/$/, '');
-  if (p && p !== '') {
-    var known = { '/login':'login','/register':'register','/dashboard':'dashboard','/403':'403' };
-    if (known[p]) { window.location.replace('/#' + known[p]); return; }
-  }
-  route();
-});
 
 /* ═══ HOME PAGE ═══ */
 var homeInitialized = false;
@@ -1012,198 +780,14 @@ function homePageInit() {
     mobileMenu.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeMobile); });
   }
 
-  var form = document.getElementById('contactForm');
-  if (form) {
-    var required = form.querySelectorAll('[required]');
-    required.forEach(function(el) {
-      var fb = document.createElement('div');
-      fb.className = 'fb';
-      el.parentNode.appendChild(fb);
-      el.addEventListener('blur', function() {
-        if (!el.value.trim()) {
-          el.classList.remove('success'); el.classList.add('error');
-          fb.textContent = 'Este campo es obligatorio'; fb.className = 'fb err';
-        } else {
-          el.classList.remove('error'); el.classList.add('success');
-          fb.textContent = ''; fb.className = 'fb';
-        }
-      });
-    });
-    form.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      var valid = true;
-      required.forEach(function(el) { if (!el.value.trim()) { valid = false; el.dispatchEvent(new Event('blur')); } });
-      var email = form.querySelector('[name="email"]');
-      if (email && email.value && !email.value.includes('@')) {
-        valid = false;
-        email.classList.add('error'); email.classList.remove('success');
-        var fb = email.parentNode.querySelector('.fb') || function(){var d=document.createElement('div');d.className='fb';email.parentNode.appendChild(d);return d;}();
-        fb.textContent = 'Email inválido'; fb.className = 'fb err';
-      }
-      if (!valid) return;
-      var btn = form.querySelector('button');
-      var orig = btn.textContent;
-      btn.disabled = true; btn.textContent = 'Enviando...';
-      try {
-        var r = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(Object.fromEntries(new FormData(form))) });
-        var res = await r.json();
-        if (res.success) {
-          form.querySelectorAll('.fb').forEach(function(el){el.textContent='';});
-          form.querySelectorAll('.fi,.fta,.fsel').forEach(function(el){el.classList.remove('success','error');});
-          alert('¡Mensaje enviado! Te contactaremos pronto.');
-          form.reset();
-        } else { alert('Error: ' + (res.message || 'No se pudo enviar')); }
-      } catch { alert('Error de conexión. Intenta de nuevo más tarde.'); }
-      btn.disabled = false; btn.textContent = orig;
-    });
-  }
+
 
   window.addEventListener('load', function() {
     setTimeout(function() { document.getElementById('loader').classList.add('hidden'); }, 400);
   });
 }
 
-/* ═══ LOGIN ═══ */
-document.getElementById('loginForm').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  var msg = document.getElementById('loginMsg');
-  msg.style.display = 'none';
-  var email = document.getElementById('loginEmail').value.trim();
-  var password = document.getElementById('loginPassword').value;
-  if (!email || !password) { msg.className = 'msg error'; msg.textContent = 'Completa todos los campos'; return; }
-  var btn = this.querySelector('button');
-  btn.disabled = true; btn.textContent = 'Entrando...';
-  try {
-    var r = await fetch('/api/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, password: password }) });
-    var res = await r.json();
-    if (res.success) { navigate('dashboard'); }
-    else { msg.className = 'msg error'; msg.textContent = res.message; btn.disabled = false; btn.textContent = 'Entrar'; }
-  } catch { msg.className = 'msg error'; msg.textContent = 'Error de conexión'; btn.disabled = false; btn.textContent = 'Entrar'; }
-});
 
-/* ═══ REGISTER ═══ */
-document.getElementById('registerForm').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  var msg = document.getElementById('registerMsg');
-  msg.style.display = 'none';
-  var name = document.getElementById('regName').value.trim();
-  var email = document.getElementById('regEmail').value.trim();
-  var org = document.getElementById('regOrg').value.trim();
-  var password = document.getElementById('regPassword').value;
-  if (!name || !email || !password) { msg.className = 'msg error'; msg.textContent = 'Completa los campos obligatorios'; return; }
-  if (password.length < 6) { msg.className = 'msg error'; msg.textContent = 'La contraseña debe tener al menos 6 caracteres'; return; }
-  var btn = this.querySelector('button');
-  btn.disabled = true; btn.textContent = 'Registrando...';
-  try {
-    var r = await fetch('/api/register', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: name, email: email, organization: org, password: password }) });
-    var res = await r.json();
-    if (res.success) { navigate('dashboard'); }
-    else { msg.className = 'msg error'; msg.textContent = res.message; btn.disabled = false; btn.textContent = 'Crear Cuenta'; }
-  } catch { msg.className = 'msg error'; msg.textContent = 'Error de conexión'; btn.disabled = false; btn.textContent = 'Crear Cuenta'; }
-});
-
-/* ═══ DASHBOARD ═══ */
-var dashboardLoaded = false;
-async function dashboardInit() {
-  var ok = await checkSession();
-  if (!ok) { navigate('login'); return; }
-  if (dashboardLoaded) return;
-  dashboardLoaded = true;
-  loadStats();
-  loadMessages(5);
-  document.querySelectorAll('#page-dashboard [data-section]').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      document.querySelectorAll('#page-dashboard .nav-item').forEach(function(b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      document.querySelectorAll('#page-dashboard .section').forEach(function(s) { s.classList.remove('active'); });
-      document.getElementById('sec-' + btn.dataset.section).classList.add('active');
-    });
-  });
-  document.querySelector('[data-section="messages"]').addEventListener('click', function() {
-    setTimeout(function() { loadMessages(false); }, 100);
-  });
-  document.querySelector('[data-section="users"]').addEventListener('click', function() {
-    setTimeout(function() { loadUsers(); }, 100);
-  });
-  document.getElementById('logoutBtn').addEventListener('click', async function() {
-    await fetch('/api/logout', { method: 'POST' });
-    dashboardLoaded = false;
-    navigate('login');
-  });
-}
-
-async function checkSession() {
-  try {
-    var r = await fetch('/api/session');
-    var d = await r.json();
-    if (!d.authenticated) return false;
-    if (d.role !== 'admin') { navigate('403'); return false; }
-    document.getElementById('userName').textContent = d.name;
-    document.getElementById('userAvatar').textContent = d.name.charAt(0).toUpperCase();
-    return true;
-  } catch { return false; }
-}
-
-async function loadStats() {
-  var r = await fetch('/api/admin/stats');
-  var d = await r.json();
-  document.getElementById('statUsers').textContent = d.totalUsers;
-  document.getElementById('statMessages').textContent = d.totalMessages;
-  document.getElementById('statUnread').textContent = d.unreadMessages;
-  document.getElementById('statRecent').textContent = d.recentUsers;
-  if (d.unreadMessages > 0) {
-    var badge = document.getElementById('unreadBadge');
-    badge.textContent = d.unreadMessages;
-    badge.style.display = '';
-  }
-}
-
-async function loadMessages(limit) {
-  var r = await fetch('/api/admin/messages');
-  var msgs = await r.json();
-  var recent = limit ? msgs.slice(0, limit) : msgs;
-  var container = limit ? 'recentMessages' : 'messagesList';
-  var countEl = limit ? 'recentCount' : 'msgCount';
-  document.getElementById(countEl).textContent = msgs.length;
-  if (!msgs.length) { document.getElementById(container).innerHTML = '<div class="empty">No hay mensajes recibidos</div>'; return; }
-  var html = '<table><thead><tr><th>Nombre</th><th>Email</th><th>Servicio</th><th>Mensaje</th><th>Fecha</th>' + (limit ? '' : '<th>Acción</th>') + '</tr></thead><tbody>';
-  recent.forEach(function(m) {
-    var preview = m.message.length > 60 ? m.message.slice(0, 60) + '...' : m.message;
-    var date = new Date(m.created_at).toLocaleDateString('es-MX', { day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit' });
-    html += '<tr><td>' + m.name + '</td><td>' + m.email + '</td><td>' + (m.service || '—') + '</td><td><span class="tag ' + (m.read ? 'read' : 'unread') + '">' + (m.read ? 'Leído' : 'Nuevo') + '</span> ' + preview + '</td><td style="font-size:.75rem;color:var(--tx3)">' + date + '</td>' + (limit ? '' : '<td><button class="act-btn ok" onclick="markRead(' + m.id + ')">' + (m.read ? '✓' : 'Leído') + '</button> <button class="act-btn" onclick="deleteMsg(' + m.id + ')">✕</button></td>') + '</tr>';
-  });
-  html += '</tbody></table>';
-  document.getElementById(container).innerHTML = html;
-}
-
-async function loadUsers() {
-  var r = await fetch('/api/admin/users');
-  var users = await r.json();
-  document.getElementById('userCount').textContent = users.length;
-  if (!users.length) { document.getElementById('usersList').innerHTML = '<div class="empty">No hay usuarios registrados</div>'; return; }
-  var html = '<table><thead><tr><th>Nombre</th><th>Email</th><th>Organización</th><th>Rol</th><th>Registro</th><th>Acción</th></tr></thead><tbody>';
-  users.forEach(function(u) {
-    var date = new Date(u.created_at).toLocaleDateString('es-MX', { day:'2-digit', month:'2-digit', year:'numeric' });
-    html += '<tr><td>' + u.name + '</td><td>' + u.email + '</td><td>' + (u.organization || '—') + '</td><td><span class="tag ' + u.role + '">' + u.role + '</span></td><td style="font-size:.75rem;color:var(--tx3)">' + date + '</td><td>' + (u.role === 'admin' ? '—' : '<button class="act-btn" onclick="deleteUser(' + u.id + ')">✕</button>') + '</td></tr>';
-  });
-  html += '</tbody></table>';
-  document.getElementById('usersList').innerHTML = html;
-}
-
-async function markRead(id) {
-  await fetch('/api/admin/messages/' + id + '/read', { method: 'PUT' });
-  loadMessages(false); loadStats();
-}
-async function deleteMsg(id) {
-  if (!confirm('¿Eliminar este mensaje?')) return;
-  await fetch('/api/admin/messages/' + id, { method: 'DELETE' });
-  loadMessages(false); loadMessages(5); loadStats();
-}
-async function deleteUser(id) {
-  if (!confirm('¿Eliminar este usuario?')) return;
-  await fetch('/api/admin/users/' + id, { method: 'DELETE' });
-  loadUsers(); loadStats();
-}
 </script>
 </body>
 </html>
