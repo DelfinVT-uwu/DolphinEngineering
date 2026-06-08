@@ -2,17 +2,13 @@
   "name": "dolphin-engineering",
   "version": "1.0.0",
   "description": "DolphinEngineering - Ciberseguridad Avanzada",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "wrangler pages dev . --d1 DB",
+    "deploy": "wrangler pages deploy .",
+    "db:init": "wrangler d1 execute dolphin-engineering-db --file schema.sql",
+    "db:remote": "wrangler d1 execute dolphin-engineering-db --remote --file schema.sql"
   },
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "better-sqlite3": "^11.0.0",
-    "dotenv": "^16.4.0",
-    "express": "^4.21.0",
-    "express-rate-limit": "^7.5.0",
-    "express-session": "^1.18.0"
+  "devDependencies": {
+    "wrangler": "^4.0.0"
   }
 }

@@ -216,11 +216,11 @@
       try {
         const r = await fetch('/api/session');
         const d = await r.json();
-        if (!d.authenticated) { window.location.href = '/client/login'; return; }
+        if (!d.authenticated) { window.location.href = '/login'; return; }
         if (d.role !== 'admin') { document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;color:var(--err);font-size:1.2rem;font-weight:600">Acceso denegado</div>'; return; }
         document.getElementById('userName').textContent = d.name;
         document.getElementById('userAvatar').textContent = d.name.charAt(0).toUpperCase();
-      } catch { window.location.href = '/client/login'; }
+      } catch { window.location.href = '/login'; }
     }
 
     /* navigation */
@@ -318,7 +318,7 @@
     /* logout */
     document.getElementById('logoutBtn').addEventListener('click', async () => {
       await fetch('/api/logout', { method: 'POST' });
-      window.location.href = '/client/login';
+      window.location.href = '/login';
     });
 
     /* init */
