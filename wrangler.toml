@@ -8,4 +8,4 @@ JWT_SECRET = "cambia_esto_en_produccion"
 [[d1_databases]]
 binding = "DB"
 database_name = "dolphin-engineering-db"
-database_id = "pon-tu-database-id-aqui"
+database_id = "7eae27e0-0bbc-48a6-b7ed-5987c6743b50"
